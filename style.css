@@ -1,0 +1,57 @@
+
+*{
+    font-family: 'Orbitron', 'sans-seri';
+}
+.container{
+    width: 300px;
+    padding:10px;
+    background-color: rgb(192, 191, 191);
+    border-radius: 4px;
+    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#res{
+    height: 67px;
+     width:285px; 
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+button{
+    width:69px;
+    height: 80px;
+    border-radius: 4px;
+    color:white;
+    font-size: 28px;
+}
+button#eq{
+    height: 165px;
+    background-color: darkolivegreen;
+}
+
+button#zero{
+    width:144px;
+    background-color: black;
+}
+
+.num{
+    background-color: dimgrey;
+}
+
+.ope{
+    background-color: brown;
+}
+
+#dot{
+    background-color: blue;
+}
+
+#clear{
+    background-color:rgb(249, 84, 33) ;
+}
+
+#del{
+    background-color:rgb(240, 163, 90) ;
+}

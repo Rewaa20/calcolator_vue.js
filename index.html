@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VUE.js Calculator</title>
+   <link rel="stylesheet" href="style.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Orbitron&family=Work+Sans:ital,wght@0,300;0,800;1,100;1,200&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div id="app" class="container">
+       <div>
+           <form action="" @submit.prevent="submit()" >
+               <input  @keyup.esc="clear()"  @keyup.enter="equal()" @keyup.delete="del()"  v-model="val" id="res" type="text" >
+           </form>
+       </div>
+       <table>
+           <tr>
+               <td @click="eval($event)"><button id="clear">c</button></td>
+               <td @click="eval($event)"><button id="del">del</button></td>
+               <td @click="eval($event)"><button class="ope" id="div" value="/">/</button></td>
+               <td @click="eval($event)"><button class="ope" id="mul" :value="multible">X</button></td>
+           </tr>
+
+           <tr>
+            <td @click="eval($event)" v-for="elm in row1"><button  class="num">{{ elm }}</button></td>
+            <td @click="eval($event)" ><button :class="opeClass" id="sub" value="-">-</button></td>
+        </tr>
+
+        <tr>
+            <td @click="eval($event)" v-for="elm in row2"><button class="num">{{elm}}</button></td>
+            <td @click="eval($event)"><button class="ope" id="sum" value="+">+</button></td>
+        </tr>
+
+        <tr>
+            <td @click="eval($event)" v-for="elm in row3"><button  class="num" >{{ elm }}</button></td>
+            <td @click="eval($event)" rowspan="2"><button id="eq">=</button></td>
+        </tr>
+
+        
+        <tr>
+            <td @click="eval($event)" colspan="2"><button class="num"id="zero">0</button></td>
+            <td @click="eval($event)"><button class="num" id="dot">.</button></td>            
+        </tr>
+       </table>
+   </div>  
+<h3 style="color:green">vue.js calculater</h3>
+<script src="vue.global.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
